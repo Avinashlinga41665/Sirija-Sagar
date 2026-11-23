@@ -6,14 +6,14 @@ export default function Footer() {
 
         {/* Names */}
         <h2 className="font-cormorant text-2xl mb-2">
-          Tharun 
+          Sagar 
           <span className="text-[#D4AF37] mx-2">&</span>
-          Vineela
+          Sirija
         </h2>
 
         {/* Date */}
         <p className="text-gray-400 mb-4">
-          August 23, 2026
+          December 03, 2026
         </p>
 
         {/* Divider */}
