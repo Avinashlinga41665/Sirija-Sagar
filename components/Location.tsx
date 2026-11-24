@@ -2,6 +2,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import FallingPetals from "@/components/FallingPetals";
+import GoldSparkles from "./GoldSparkles";
 
 export default function Location() {
   return (
@@ -16,6 +18,8 @@ export default function Location() {
         text-[#762D40]
       "
     >
+      <FallingPetals />
+      <GoldSparkles/>
       {/* Faint Palace Watermark Background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
 

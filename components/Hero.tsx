@@ -3,6 +3,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import FallingPetals from "@/components/FallingPetals";
+import GoldSparkles from "./GoldSparkles";
 
 /* =========================================
    COUNTDOWN
@@ -176,7 +178,8 @@ export default function Hero() {
         text-[#762D40]
       "
     >
-
+<FallingPetals />
+<GoldSparkles/>
       {/* =================================
           FADED PALACE BACKGROUND
       ================================= */}
@@ -471,7 +474,7 @@ export default function Hero() {
             text-[#765D4A]
             text-base md:text-lg
           ">
-            Your presence and blessings mean the world to us.
+            Your presence and blessings will make our special day even more beautiful.
           </p>
 
           <p className="
