@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -6,473 +7,168 @@ export default function Location() {
   return (
     <section
       id="venue"
-      className="relative overflow-hidden bg-[#fbf8f2] py-32"
+      className="
+        relative isolate
+        overflow-hidden
+        bg-[#F9F0E3]
+        px-5
+        py-24 md:py-32
+        text-[#762D40]
+      "
     >
-      {/* ===================================== */}
-      {/* Paper Texture */}
-      {/* ===================================== */}
+      {/* Palace Background */}
 
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-90"
-        style={{
-          backgroundImage: "url('/paper-texture.jpg')",
-        }}
-      />
+      <div className="absolute inset-0 -z-10 pointer-events-none">
 
-      {/* Soft White Overlay */}
+        <img
+          src="/palace-outline.png"
+          alt=""
+          className="
+            h-full w-full
+            object-cover object-center
+            opacity-[0.20]
+          "
+        />
 
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom,#fffefb 0%,#fbf8f2 40%,#f8f2e8 100%)",
-        }}
-      />
-
-      {/* ===================================== */}
-      {/* Temple Background */}
-      {/* ===================================== */}
-
-      <motion.img
-        src="/temple-outline.png"
-        alt=""
-        initial={{ opacity: 0, scale: 1.05 }}
-        whileInView={{ opacity: .10, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.5 }}
-        className="
-          absolute
-          left-1/2
-          top-0
-          -translate-x-1/2
-          w-[1300px]
-          max-w-none
-          pointer-events-none
-          select-none
-        "
-      />
-
-      {/* Temple Glow */}
-
-      <div
-        className="
-          absolute
-          left-1/2
-          top-44
-          -translate-x-1/2
-          h-[700px]
-          w-[700px]
-          rounded-full
-          bg-[#D4AF37]/10
-          blur-[170px]
-          pointer-events-none
-        "
-      />
-
-      {/* ===================================== */}
-      {/* Banana Leaves */}
-      {/* ===================================== */}
-
-      <motion.img
-        src="/banana-left.png"
-        alt=""
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="
-          absolute
-
-          top-[40px]
-          left-[-70px]
-          w-[220px]
-
-          md:top-[35px]
-          md:left-[-100px]
-          md:w-[320px]
-
-          lg:left-[-125px]
-          lg:w-[390px]
-
-          xl:left-[-140px]
-          xl:w-[430px]
-
-          pointer-events-none
-          select-none
-          z-0
-        "
-      />      <motion.img
-        src="/banana-left.png"
-        alt=""
-        initial={{ opacity: 0, x: 40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="
-          absolute
-          scale-x-[-1]
-
-          top-[40px]
-          right-[-70px]
-          w-[220px]
-
-          md:top-[35px]
-          md:right-[-100px]
-          md:w-[320px]
-
-          lg:right-[-125px]
-          lg:w-[390px]
-
-          xl:right-[-140px]
-          xl:w-[430px]
-
-          pointer-events-none
-          select-none
-          z-0
-        "
-      />
-
-      {/* ===================================== */}
-      {/* Ganesha */}
-      {/* ===================================== */}
-
-      <motion.img
-        src="/ganesha-emblem.png"
-        alt=""
-        initial={{ opacity: 0, scale: .8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="
-          absolute
-          left-1/2
-          top-16
-          -translate-x-1/2
-          w-24
-          md:w-32
-          pointer-events-none
-          select-none
-          z-20
-        "
-      />
-
-      <div
-        className="
-          absolute
-          left-1/2
-          top-20
-          -translate-x-1/2
-          h-36
-          w-36
-          rounded-full
-          bg-[#D4AF37]/20
-          blur-[70px]
-          pointer-events-none
-        "
-      />
-
-      {/* ===================================== */}
-      {/* Floating Petals */}
-      {/* ===================================== */}
-
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-
-        {[...Array(14)].map((_, i) => (
-
-          <motion.img
-            key={i}
-            src="/petal.png"
-            alt=""
-            className="absolute w-6"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `-${Math.random() * 20}%`,
-            }}
-            animate={{
-              y: ["0vh", "120vh"],
-              x: [0, -15, 20, -10, 0],
-              rotate: [0, 180, 360],
-              opacity: [0, .8, .8, 0],
-            }}
-            transition={{
-              duration: 14 + Math.random() * 6,
-              repeat: Infinity,
-              delay: Math.random() * 8,
-              ease: "linear",
-            }}
-          />
-
-        ))}
+        <div className="
+          absolute inset-0
+          bg-[#FFF9EF]/65
+        " />
 
       </div>
 
-      {/* ===================================== */}
       {/* Main Content */}
-      {/* ===================================== */}
 
-      <div className="relative z-30 mx-auto max-w-5xl px-6 text-center">
+      <div className="
+        mx-auto
+        max-w-4xl
+        text-center
+      ">
 
-
-        {/* Section Title */}
-
-        <motion.h2
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: .2 }}
-          className="
-            font-cormorant
-            text-[#4B3725]
-            text-5xl
-            md:text-7xl
-            font-semibold
-          "
-        >
-          Wedding Venue
-        </motion.h2>
-
-        {/* Gold Divider */}
+        {/* Heading */}
 
         <motion.div
-          initial={{ opacity: 0, scaleX: 0 }}
-          whileInView={{ opacity: 1, scaleX: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: .3 }}
-          className="flex justify-center my-8"
+          transition={{ duration: 0.8 }}
         >
-          <img
-            src="/gold-divider.png"
-            alt=""
-            className="w-60 md:w-72"
-          />
+
+          <p className="
+            uppercase
+            tracking-[0.35em]
+            text-[#A7834C]
+            text-xs md:text-sm
+            mb-5
+          ">
+            Celebrate With Us
+          </p>
+
+          <h2 className="
+            font-greatVibes
+            text-[#762D40]
+            text-6xl md:text-8xl
+          ">
+            The Venue
+          </h2>
+
         </motion.div>
 
-        {/* Venue Name */}
+        {/* Venue Card */}
 
-        <motion.h3
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: .4 }}
+          transition={{ duration: 0.9, delay: 0.2 }}
           className="
-            font-cormorant
-            text-[#5A4533]
-            text-4xl
-            md:text-6xl
-            leading-tight
+            relative
+            mx-auto
+            mt-12 md:mt-16
+            max-w-2xl
+            rounded-[28px]
+            border border-[#C69A4E]/40
+            bg-[#FFF9F0]/85
+            backdrop-blur-sm
+            px-6 py-10
+            md:px-14 md:py-14
+            shadow-[0_15px_50px_rgba(118,45,64,0.08)]
           "
         >
-          Raja Rani
-          <br />
-          Function hall
-        </motion.h3>
 
-        {/* City */}
+          {/* Venue Name */}
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: .5 }}
-          className="
-            mt-5
+          <p className="
             uppercase
-            tracking-[0.35em]
-            text-[#B38834]
-            text-sm
-          "
-        >
-          Jangareddygudem • Andhra Pradesh
-        </motion.p>
+            tracking-[0.3em]
+            text-[#A7834C]
+            text-xs
+            mb-5
+          ">
+            Wedding Venue
+          </p>
 
-        {/* Description */}
+          <h3 className="
+            font-cormorant
+            font-semibold
+            text-[#762D40]
+            text-4xl md:text-6xl
+            leading-tight
+          ">
+            Raja Rani
+            <br />
+            Function Hall
+          </h3>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: .6 }}
-          className="
-            mx-auto
-            mt-10
-            max-w-3xl
-            text-[#6B5946]
-            leading-9
-            text-base
-            md:text-lg
-          "
-        >
-          We warmly invite you to join us at
-          <span className="font-semibold text-[#8B6A2D]">
-            {" "}Raja Rani Function hall{" "}
-          </span>
-          as we celebrate our wedding amidst the
-          blessings of our families, friends and loved ones.
-        </motion.p>        {/* ===================================== */}
-        {/* Venue Information Card */}
-        {/* ===================================== */}
+          {/* Address */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: .7 }}
-          className="
-            mt-20
-            mx-auto
-            max-w-4xl
-            rounded-[36px]
-            border
-            border-[#D4AF37]/20
-            bg-white/60
-            backdrop-blur-xl
-            shadow-[0_20px_60px_rgba(0,0,0,0.08)]
-            overflow-hidden
-          "
-        >
+          <div className="mt-8">
 
-          {/* Top */}
+            <div className="
+              mx-auto
+              mb-5
+              h-px
+              w-20
+              bg-[#C69A4E]/60
+            " />
 
-          <div className="px-10 py-12">
+            <p className="
+              uppercase
+              tracking-[0.25em]
+              text-[#A7834C]
+              text-xs
+              mb-4
+            ">
+              Venue Address
+            </p>
 
-            {/* Address */}
+            <p className="
+              font-serif
+              text-[#765D4A]
+              text-base md:text-lg
+              leading-8
+            ">
+              3rd Floor, Bommidi Elite Towers
+              <br />
+              Buttayagudam Road
+              <br />
+              Jangareddygudem
+              <br />
+              Andhra Pradesh
+            </p>
 
-            <div className="mb-10">
-
-              <p className="uppercase tracking-[0.3em] text-[#B38834] text-xs mb-3">
-                Venue Address
-              </p>
-
-              <h4
-                className="
-                  font-cormorant
-                  text-[#4B3725]
-                  text-3xl
-                  md:text-4xl
-                  mb-4
-                "
-              >
-                Raja Rani Function hall
-              </h4>
-
-              <p
-                className="
-                  text-[#6A5745]
-                  leading-8
-                  text-base
-                  md:text-lg
-                "
-              >
-                3rd floor, Bommidi Elite Towers
-                <br />
-                Buttayagudam Road (48M3+CVR)
-                <br />
-                Jangareddygudem,
-                Andhra Pradesh.
-              </p>
-
-            </div>
-
-            {/* Divider */}
-
-            <div className="flex justify-center my-8">
-
-              <img
-                src="/gold-divider.png"
-                alt=""
-                className="w-48 opacity-80"
-              />
-
-            </div>
-
-            {/* Date Time Grid */}
-
-            <div
-              className="
-                grid
-                grid-cols-1
-                md:grid-cols-2
-                gap-10
-              "
-            >
-
-              <div>
-
-                <p className="uppercase tracking-[0.3em] text-[#B38834] text-xs mb-3">
-                  Wedding Date
-                </p>
-
-                <h5
-                  className="
-                    font-cormorant
-                    text-[#4B3725]
-                    text-3xl
-                  "
-                >
-                  03 December 2026
-                </h5>
-
-                <p className="text-[#7A6652] mt-2">
-                  Thursday
-                </p>
-
-              </div>
-
-              <div>
-
-                <p className="uppercase tracking-[0.3em] text-[#B38834] text-xs mb-3">
-                  Muhurtham
-                </p>
-
-                <h5
-                  className="
-                    font-cormorant
-                    text-[#4B3725]
-                    text-3xl
-                  "
-                >
-                  06:00 AM
-                </h5>
-
-                <p className="text-[#7A6652] mt-2">
-                  Followed by Lunch
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>          {/* ===================================== */}
-          {/* Bottom Divider */}
-          {/* ===================================== */}
-
-          <div className="flex justify-center pb-10">
-
-            <img
-              src="/gold-divider.png"
-              alt=""
-              className="w-48 opacity-80"
-            />
+            <p className="
+              mt-3
+              text-sm
+              tracking-wider
+              text-[#A7834C]
+            ">
+              48M3+CVR
+            </p>
 
           </div>
 
-        </motion.div>
-
-        {/* ===================================== */}
-        {/* Google Maps Button */}
-        {/* ===================================== */}
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: .9 }}
-          className="
-            mt-16
-            flex
-            justify-center
-          "
-        >
+          {/* Directions */}
 
           <a
             href="https://maps.app.goo.gl/4yAMgcSTDsGXy7YXA"
@@ -481,258 +177,31 @@ export default function Location() {
             className="
               inline-flex
               items-center
-              gap-4
-
+              justify-center
+              gap-3
+              mt-9
               rounded-full
-
-              border
-              border-[#D4AF37]/40
-
-              bg-[#C89B3C]
-
-              px-10
-              py-5
-
+              border border-[#C69A4E]
+              bg-[#762D40]
+              px-8 py-4
               text-white
-
+              text-xs md:text-sm
               uppercase
-              tracking-[0.25em]
-              text-sm
-
-              shadow-[0_15px_40px_rgba(212,175,55,.25)]
-
-              transition-all
-              duration-300
-
+              tracking-[0.2em]
+              shadow-lg
+              transition-all duration-300
+              hover:bg-[#8D3B50]
               hover:-translate-y-1
-              hover:shadow-[0_20px_50px_rgba(212,175,55,.35)]
             "
           >
-
-            <span className="text-xl">
-              📍
-            </span>
-
+            <span className="text-lg">📍</span>
             Get Directions
-
+            <span>→</span>
           </a>
 
         </motion.div>
 
-        {/* ===================================== */}
-        {/* Helpful Note */}
-        {/* ===================================== */}
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1 }}
-          className="
-            mx-auto
-            mt-8
-            max-w-xl
-
-            text-center
-
-            text-[#75624E]
-            italic
-
-            leading-8
-          "
-        >
-          We look forward to celebrating this
-          joyous occasion with your presence.
-          Wishing you a pleasant journey to
-          the venue.
-        </motion.p>
-
       </div>
-
-      {/* ===================================== */}
-      {/* Temple Mist */}
-      {/* ===================================== */}
-
-      <div
-        className="
-          absolute
-          bottom-0
-          inset-x-0
-          h-56
-
-          bg-gradient-to-t
-
-          from-[#fbf8f2]
-          via-[#fbf8f2]/70
-          to-transparent
-
-          pointer-events-none
-        "
-      />
-
-      {/* ===================================== */}
-      {/* Bottom Glow */}
-      {/* ===================================== */}
-
-      <div
-        className="
-          absolute
-          bottom-[-180px]
-          left-1/2
-          -translate-x-1/2
-
-          h-[420px]
-          w-[900px]
-
-          rounded-full
-
-          bg-[#D4AF37]/10
-
-          blur-[150px]
-
-          pointer-events-none
-        "
-      />      {/* ===================================== */}
-      {/* Sacred Cows */}
-      {/* ===================================== */}
-
-      <motion.img
-        src="/cow-left.png"
-        alt=""
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 1 }}
-        className="
-          absolute
-
-          left-[-10px]
-          bottom-[-10px]
-
-          w-[110px]
-
-          sm:w-[150px]
-          md:w-[180px]
-          lg:w-[210px]
-
-          scale-x-[-1]
-
-          pointer-events-none
-          select-none
-        "
-      />
-
-      <motion.img
-        src="/cow-left.png"
-        alt=""
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 1 }}
-        className="
-          absolute
-
-          right-[-10px]
-          bottom-[-10px]
-
-          w-[110px]
-
-          sm:w-[150px]
-          md:w-[180px]
-          lg:w-[210px]
-
-          pointer-events-none
-          select-none
-        "
-      />
-
-      {/* ===================================== */}
-      {/* Flower Bed */}
-      {/* ===================================== */}
-
-      <img
-        src="/flower-bed.png"
-        alt=""
-        className="
-          absolute
-          bottom-0
-          left-0
-          w-full
-          pointer-events-none
-          select-none
-          opacity-90
-        "
-      />
-
-      {/* ===================================== */}
-      {/* Floating Gold Dust */}
-      {/* ===================================== */}
-
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-
-        {[...Array(12)].map((_, i) => (
-
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-[#D4AF37]/40"
-            style={{
-              width: `${4 + Math.random() * 4}px`,
-              height: `${4 + Math.random() * 4}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${20 + Math.random() * 70}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [.2, .8, .2],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 3,
-              repeat: Infinity,
-              delay: Math.random() * 4,
-            }}
-          />
-
-        ))}
-
-      </div>
-
-      {/* ===================================== */}
-      {/* Soft Vignette */}
-      {/* ===================================== */}
-
-      <div
-        className="
-          absolute
-          inset-0
-          shadow-[inset_0_0_180px_rgba(0,0,0,.05)]
-          pointer-events-none
-        "
-      />
-
-      {/* ===================================== */}
-      {/* Bottom Ornament */}
-      {/* ===================================== */}
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: .15 }}
-        viewport={{ once: true }}
-        transition={{ delay: 1.2 }}
-        className="
-          absolute
-          bottom-8
-          left-1/2
-          -translate-x-1/2
-
-          text-[#C89B3C]
-          text-5xl
-
-          pointer-events-none
-          select-none
-        "
-      >
-        ❦
-      </motion.div>
 
     </section>
   );
