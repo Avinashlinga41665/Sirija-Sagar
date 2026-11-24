@@ -265,11 +265,11 @@ const toggleMusic = async () => {
             "
           >
             <span className="hidden md:block">
-              Sagar{" "}
+              Sirija{" "}
               <span className="text-[#C89B3C]">
                 &
               </span>{" "}
-              Sirija
+              Sagar
             </span>
 
             <span className="md:hidden">

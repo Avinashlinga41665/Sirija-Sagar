@@ -181,86 +181,28 @@ export default function Hero() {
           FADED PALACE BACKGROUND
       ================================= */}
 
-      <div className="
-        absolute inset-0
-        z-0
-        pointer-events-none
-        overflow-hidden
-      ">
+     {/* Full-screen wedding background */}
+<div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#FFF9EF]">
 
-        <img
-          src="/palace-outline.png"
-          alt=""
-          className="
-            absolute inset-0
-            w-full h-full
-            object-cover
-            object-center
-            opacity-75
-          "
-        />
+  <img
+    src="/sagar-sirija-background.jpg"
+    alt=""
+    className="
+      absolute inset-0
+      w-full h-full
+      object-cover
+      object-[center_65%]
+      opacity-[0.28]
+    "
+  />
 
-        {/* Ivory wash */}
+  {/* Soft ivory overlay */}
+  <div className="absolute inset-0 bg-[#FFF9EF]/45" />
 
-        <div className="
-          absolute inset-0
-          bg-[#FFF9EF]/35
-        " />
+  {/* Gentle fade for text readability */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#FFF9EF]/20 via-transparent to-[#F9F0E3]/40" />
 
-        {/* Bottom soft fade */}
-
-        <div className="
-          absolute inset-0
-          bg-gradient-to-b
-          from-[#FFF9EF]/10
-          via-transparent
-          to-[#F9F0E3]/50
-        " />
-
-      </div>
-
-      {/* =================================
-          FLORAL DECORATIONS
-      ================================= */}
-
-      <div className="
-        absolute inset-0
-        z-[2]
-        pointer-events-none
-        overflow-hidden
-      ">
-
-        {/* LEFT FLORAL */}
-
-        <img
-          src="/images/floral-left-top.png"
-          alt=""
-          className="
-            absolute
-            top-0 left-0
-            w-[29%] md:w-[23%]
-            max-w-[340px]
-            h-auto
-            object-contain
-          "
-        />
-
-        {/* RIGHT FLORAL */}
-
-        <img
-          src="/images/floral-right-top.png"
-          alt=""
-          className="
-            absolute
-            top-0 right-0
-            w-[32%] md:w-[27%]
-            max-w-[390px]
-            h-auto
-            object-contain
-          "
-        />
-
-      </div>
+</div>
 
       {/* =================================
           MUSIC
@@ -297,7 +239,7 @@ export default function Hero() {
             text-7xl sm:text-8xl md:text-9xl
             mt-5
           ">
-            Sagar
+            Sirija
           </h1>
 
           <div className="
@@ -323,7 +265,7 @@ export default function Hero() {
             text-[#762D40]
             text-7xl sm:text-8xl md:text-9xl
           ">
-            Sirija
+            Sagar
           </h1>
 
           <p className="

@@ -12,48 +12,50 @@ export default function Location() {
         overflow-hidden
         bg-[#F9F0E3]
         px-5
-        py-24 md:py-32
+        py-15 md:py-20
         text-[#762D40]
       "
     >
-      {/* Palace Background */}
-
-      <div className="absolute inset-0 -z-10 pointer-events-none">
+      {/* Faint Palace Watermark Background */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
 
         <img
           src="/palace-outline.png"
           alt=""
+          aria-hidden="true"
           className="
-            h-full w-full
-            object-cover object-center
-            opacity-[0.20]
+            absolute inset-0
+            w-full h-full
+            object-cover
+            object-center
+            opacity-[0.5]
           "
         />
 
+        {/* Ivory wash */}
+        <div className="absolute inset-0 bg-[#FFF9EF]/65" />
+
+        {/* Soft top and bottom fade */}
         <div className="
           absolute inset-0
-          bg-[#FFF9EF]/65
+          bg-gradient-to-b
+          from-[#FFF9EF]/40
+          via-transparent
+          to-[#F9F0E3]/70
         " />
 
       </div>
 
       {/* Main Content */}
-
-      <div className="
-        mx-auto
-        max-w-4xl
-        text-center
-      ">
+      <div className="relative z-10 mx-auto max-w-4xl text-center">
 
         {/* Heading */}
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-
           <p className="
             uppercase
             tracking-[0.35em]
@@ -71,11 +73,9 @@ export default function Location() {
           ">
             The Venue
           </h2>
-
         </motion.div>
 
         {/* Venue Card */}
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,16 +88,15 @@ export default function Location() {
             max-w-2xl
             rounded-[28px]
             border border-[#C69A4E]/40
-            bg-[#FFF9F0]/85
-            backdrop-blur-sm
+            bg-[#FFF9F0]/90
+            backdrop-blur-md
             px-6 py-10
-            md:px-14 md:py-14
+            md:px-12 md:py-12
             shadow-[0_15px_50px_rgba(118,45,64,0.08)]
           "
         >
 
           {/* Venue Name */}
-
           <p className="
             uppercase
             tracking-[0.3em]
@@ -121,7 +120,6 @@ export default function Location() {
           </h3>
 
           {/* Address */}
-
           <div className="mt-8">
 
             <div className="
@@ -169,7 +167,6 @@ export default function Location() {
           </div>
 
           {/* Directions */}
-
           <a
             href="https://maps.app.goo.gl/4yAMgcSTDsGXy7YXA"
             target="_blank"

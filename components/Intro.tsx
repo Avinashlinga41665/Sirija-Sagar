@@ -223,7 +223,7 @@ export default function Intro({ show, onOpen }: IntroProps) {
                 text-6xl sm:text-7xl md:text-8xl lg:text-9xl
                 text-[#762D40]
               ">
-                Sagar
+                Sirija
               </h1>
 
               {/* WEDS */}
@@ -248,7 +248,8 @@ export default function Intro({ show, onOpen }: IntroProps) {
                 text-6xl sm:text-7xl md:text-8xl lg:text-9xl
                 text-[#762D40]
               ">
-                Sirija
+                Sagar
+                
               </h1>
 
               {/* SUBTITLE */}

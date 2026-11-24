@@ -6,9 +6,9 @@ export default function Footer() {
 
         {/* Names */}
         <h2 className="font-cormorant text-2xl mb-2">
-          Sagar 
-          <span className="text-[#D4AF37] mx-2">&</span>
           Sirija
+          <span className="text-[#D4AF37] mx-2">&</span>
+          Sagar
         </h2>
 
         {/* Date */}
