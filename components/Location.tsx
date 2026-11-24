@@ -150,24 +150,11 @@ export default function Location() {
               text-base md:text-lg
               leading-8
             ">
-              3rd Floor, Bommidi Elite Towers
-              <br />
-              Buttayagudam Road
               <br />
               Jangareddygudem
               <br />
               Andhra Pradesh
             </p>
-
-            <p className="
-              mt-3
-              text-sm
-              tracking-wider
-              text-[#A7834C]
-            ">
-              48M3+CVR
-            </p>
-
           </div>
 
           {/* Directions */}

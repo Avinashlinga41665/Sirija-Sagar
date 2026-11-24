@@ -483,7 +483,7 @@ export default function Hero() {
             text-4xl md:text-5xl
             mt-4
           ">
-            With love, Sagar & Sirija
+            With love Sirija & Sagar
           </p>
 
         </motion.div>
